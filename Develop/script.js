@@ -20,6 +20,16 @@ function getLength() {
 
 getLength();
 
+function checkLength() {
+  if (length < 8 || length > 128) 
+  console.log("number of characters incorrect, please try again")
+
+  // if (length) > 8 && length < 128)
+}
+
+checkLength();
+
+
 // var getLength = function() {
 //   window.prompt("Please enter the number of characters you would like for your password. (must be between 8 and 128)");
 // };
