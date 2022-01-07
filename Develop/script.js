@@ -11,6 +11,12 @@
 // generatePassword();
 
 
+var password = {
+  length: 
+  characterType = [ "!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"]
+}
+
+
 window.alert("Please enter your password criteria");
 
 function getLength() {
@@ -22,7 +28,9 @@ getLength();
 
 function checkLength() {
   if (length < 8 || length > 128) 
-  console.log("number of characters incorrect, please try again")
+  window.alert("number of characters incorrect, please try again");
+  return getLength();
+
 
   // if (length) > 8 && length < 128)
 }
