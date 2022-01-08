@@ -1,50 +1,8 @@
-// var passwordLength
-// var characterTypes = [ "!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"]
-// var finalPassword 
-
-
-// function generatePassword() {
-//   window.alert("Please enter your password criteria");
-
-// }
-
-// generatePassword();
-
-
-var password = {
-  length: 
-  characterType = [ "!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"]
-}
-
-
 window.alert("Please enter your password criteria");
 
 function getLength() {
-  var length = window.prompt("Please enter the number of characters you would like for your password. (must be between 8 and 128)");
-  console.log("You chose " + length + " characters for your password.");
+  window.prompt("Please enter the number of characters you would like in your password (8-128).");
 }
 
 getLength();
-
-function checkLength() {
-  if (length < 8 || length > 128) 
-  window.alert("number of characters incorrect, please try again");
-  return getLength();
-
-
-  // if (length) > 8 && length < 128)
-}
-
-checkLength();
-
-
-// var getLength = function() {
-//   window.prompt("Please enter the number of characters you would like for your password. (must be between 8 and 128)");
-// };
-
-// console.log("You chose " + getLength + " characters for your password.");
-
-
-
-
 
