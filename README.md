@@ -7,6 +7,13 @@ SO THAT I can create a strong password that provides greater security
 GIVEN I need a new, secure password
 WHEN I click the button to generate a password
 THEN I am presented with a series of prompts for password criteria
+    - add event listener to button
+    - create event handler to start the start password generator function
+    - wrap the password generator logic in a start password generator function
+    - nest prompts in start password generator function
+    - while conditions are true then move to next prompt but first confirm with user that their selections were made intentionally. If yes, move forward, if no, break out of while loop
+    - create generate password funtion which takes into acocunt user input and randomly generates a password. 
+    - alert user of their generated password
 WHEN prompted for password criteria
 THEN I select which criteria to include in the password
 WHEN prompted for the length of the password
