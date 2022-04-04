@@ -1,16 +1,20 @@
-function startPasswordGenerator() {
-  var length = window.prompt("How many characters would you like in your password. (must be between 8 and 128");
-  console.log(length);
-  if (length >= 8 && length <= 128) {
-    window.alert("You chose " + length + " characters for your password.");
-  } else {
-    window.alert("Insufficient character length, please choose a number 8-128");
-    (startPasswordGenerator());
-  }
-};
+var length
 
-startPasswordGenerator();
+
+function startPasswordGenerator() {
+  window.alert("Welcome to Password Generator! Select the criteria you would like for your password.");
+  var length = window.prompt("choose the number of characters you would like 8-128");
+    if(length >= 8 && length <=128) {
+      window.alert("you chose " + length + " characters for your password.");
+      window.confirm("are you sure you would like " + length + " characters?"); 
+    } else {
+      window.alert("insufficient length, please choose a password length 8-128");
+      startPasswordGenerator();
+    }     
+}
+
   
 
 
 
+startPasswordGenerator();
