@@ -1,7 +1,13 @@
-const lowercase = ['a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-const uppercase = ['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+const lower = ['a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+const upper = ['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 const special = ['!', '?', '+', '-', '~', '*', ':']
 const numeric = ['0','1','2','3','4','5','6','7','8','9']
+
+var button = document.querySelector("button");
+button.addEventListener("click", function() {
+  alert("button clicked");
+});
+
 
 // function startPasswordGenerator() {
 function criteria () {
@@ -23,48 +29,60 @@ function criteria () {
   while (true) {
     lower = window.confirm("would you like your password to include lower case characters?");
     if (lower) {
-      var confirmed = window.confirm("Are you sure you would like to include lower case characters?");
-      if (confirmed) {
+      var yesLowerConfirmed = window.confirm("Are you sure you would like to include lower case characters?");
+      if (yesLowerConfirmed) {
         break;
       }
-    }
-    window.alert("you would not like lower case characters");
-  }
+    } 
+      var noLowerConfirmed = window.confirm("Are you sure you would NOT like to include lower case characters?");
+      if (noLowerConfirmed) {
+        break; 
+      }
+    } 
 
   var upper = ''
   while(true) {
     upper = window.confirm("Would you like your password to include uppercase characters?");
     if(upper) {
-      confirmed = window.confirm("Are you sure you would like your password to include uppercase characters?")
-      if(confirmed) {
+      var yesUpperConfirmed = window.confirm("Are you sure you would like your password to include uppercase characters?")
+      if(yesUpperConfirmed) {
         break;
       }  
     }
-    window.alert("you would not like upper case characters");
+      var noUpperConfirmed = window.confirm("Are you sure you would NOT like to include upper case characters?");
+      if (noUpperConfirmed) {
+        break;
+      }
   }
 
   var special = ''
   while(true) {
     special = window.confirm("Would you like your password to include special characters?");
     if(special) {
-      confirmed = window.confirm("Are you sure you would like special characters included in your password?")
-      if (confirmed) {
+      var yesSpecialConfirmed = window.confirm("Are you sure you would like special characters included in your password?")
+      if (yesSpecialConfirmed) {
         break;
       }  
     }
-    window.alert("you would not like special characters");
+      var noSpecialConfirmed = window.confirm("Are you sure you would NOT like to include special characters?");
+      if (noSpecialConfirmed) {
+        break;
+      }
   }
 
   var numeric = ''
   while(true) {
     numeric = window.confirm("Would you like your passowrd to include numeric characters?");
     if(numeric) {
-      confirmed = window.confirm("Are you sure you would like your password to include numeric characters?")
-      if(confirmed) {
+      var yesNumericConfirmed = window.confirm("Are you sure you would like your password to include numeric characters?")
+      if(yesNumericConfirmed) {
         break;
       }
     }
-    window.alert("You have chosen to not include numeric characters");
+    var noNumericConfirmed = window.confirm("Are you sure you would NOT like to include numeric characters?");
+    if (noNumericConfirmed) {
+      break;
+    }
   }
 
 }
