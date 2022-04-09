@@ -2,6 +2,7 @@ const lower = ['a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', '
 const upper = ['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 const special = ['!', '?', '+', '-', '~', '*', ':']
 const numeric = ['0','1','2','3','4','5','6','7','8','9']
+const eligableCharacters = []
 
 var button = document.querySelector("button");
 button.addEventListener("click", function() {
@@ -24,67 +25,91 @@ function criteria () {
   }
   console.log(length);
 
-  var lower = ''
-  while (true) {
-    lower = window.confirm("would you like your password to include lower case characters?");
-    if (lower) {
-      var yesLowerConfirmed = window.confirm("Are you sure you would like to include lower case characters?");
-      if (yesLowerConfirmed) {
-        break;
-      }
-    } 
-      var noLowerConfirmed = window.confirm("Are you sure you would NOT like to include lower case characters?");
-      if (noLowerConfirmed) {
-        break; 
-      }
-    } 
-
-  var upper = ''
   while(true) {
-    upper = window.confirm("Would you like your password to include uppercase characters?");
-    if(upper) {
-      var yesUpperConfirmed = window.confirm("Are you sure you would like your password to include uppercase characters?")
-      if(yesUpperConfirmed) {
+    let lowerCase = window.confirm("click ok if you would like your password to include lowercase characters.");
+    if (lowerCase === true) {
+      let confirm = window.confirm("click ok if you are sure you would like lowercase characters.");
+      if (confirm === true) {
+        for (i = 0; i < lower.length; i++) {
+          let char = lower[i] 
+          eligableCharacters.push(char);
+        }
         break;
       }  
-    }
-      var noUpperConfirmed = window.confirm("Are you sure you would NOT like to include upper case characters?");
-      if (noUpperConfirmed) {
+    } else {
+      let confirm = window.confirm("click ok if you are sure you would like to ommit lowercase characters.");
+      if (confirm === true) {
         break;
       }
-  }
+    }
+  }   
+  alert(eligableCharacters); 
 
-  var special = ''
   while(true) {
-    special = window.confirm("Would you like your password to include special characters?");
-    if(special) {
-      var yesSpecialConfirmed = window.confirm("Are you sure you would like special characters included in your password?")
-      if (yesSpecialConfirmed) {
+    let uppercase = window.confirm("click okay if you would like to include uppercase characters");
+    if (uppercase === true) {
+      let confirm = window.confirm("click ok if you are sure you would like to include uppercase characters");
+      if(confirm === true) {
+        for(i = 0; i < upper.length; i++) {
+          let char = upper[i]
+          eligableCharacters.push(char)
+        }
+        break;
+      }
+    } else {  
+      let confirm = window.confirm("click ok if you would like to ommit uppercase characters.");
+      if(confirm === true) {
+        break;
+      }
+    }  
+  }
+  alert(eligableCharacters); 
+
+  while(true) {
+    let specialChar = window.confirm("Click ok if you would like your password to include special characters");
+    if(specialChar === true) {
+      let confirm = window.confirm("Click ok if you are sure you would like your password to include special characters");
+      if(confirm === true) {
+        for (i = 0; i < special.length; i++) {
+          let char = special[i]
+          eligableCharacters.push(char); 
+        }
         break;
       }  
-    }
-      var noSpecialConfirmed = window.confirm("Are you sure you would NOT like to include special characters?");
-      if (noSpecialConfirmed) {
+    } else {
+      let confirm = window.confirm("click ok if you would like to ommit special characters.");
+      if(confirm === true) {
         break;
       }
-  }
+    }  
+  }  
+  alert(eligableCharacters); 
 
-  var numeric = ''
   while(true) {
-    numeric = window.confirm("Would you like your passowrd to include numeric characters?");
-    if(numeric) {
-      var yesNumericConfirmed = window.confirm("Are you sure you would like your password to include numeric characters?")
-      if(yesNumericConfirmed) {
+    let numericChar = window.confirm("click ok if you would like your password to include numeric characters.");
+    if (numericChar === true) {
+      let confirm = window.confirm("click ok if you are sure you would like to include numeric characters.");
+      if (confirm === true) {
+        for(i = 0; i < numeric.length; i++) {
+          let char = numeric[i]
+          eligableCharacters.push(char);
+        }
+        break;
+      }
+    } else {
+      let confirm = window.confirm("click ok if you would like to ommit numeric characters.");
+      if (confirm === true) {
         break;
       }
     }
-    var noNumericConfirmed = window.confirm("Are you sure you would NOT like to include numeric characters?");
-    if (noNumericConfirmed) {
-      break;
-    }
   }
-
+  alert(eligableCharacters);  
 }
+
+
+
+
+
 
     
     
