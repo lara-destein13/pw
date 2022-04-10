@@ -103,9 +103,26 @@ function criteria () {
       }
     }
   }
-  alert(eligableCharacters);  
+  alert(eligableCharacters);
+
+  function generatePassword() {
+    length();
+    lower();
+    upper();
+    special();
+    numeric();
+    var password = '';
+    for (i = 0; i < length; i++) {
+      var index = Math.floor(Math.random() * eligableCharacters.length);
+      var char = eligableCharacters[index];
+      password += char;
+    }
+    window.alert(password);
+  }
+  generatePassword();
 }
 
+console.log(Math.PI);
 
 
 
